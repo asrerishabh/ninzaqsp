@@ -30,7 +30,7 @@ public class Caimpaign_Test extends baseclass {
 
 		String TARGET_SIZE = eLib.readDataFromExcel("Campaign", 1, 1);
 
-		System.out.println("TARGET_SIZE" +TARGET_SIZE);
+		System.out.println("TARGET_SIZE");
 		WebElement createButton = cp.getSubmitButton();
 		createButton.click();
 		Assert.assertTrue(cp.getToastmsg1().getText().contains("Successfully Added"));
