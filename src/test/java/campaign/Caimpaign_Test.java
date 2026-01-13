@@ -27,7 +27,8 @@ public class Caimpaign_Test extends baseclass {
 
 		cp.getAddCreateCampaignBtn1().click();
 		javautility.enterRandomString(cp.getCampaignName(), 8);
-
+// kfnf
+		//joijfo
 		String TARGET_SIZE = eLib.readDataFromExcel("Campaign", 1, 1);
 
 		System.out.println("TARGET_SIZE");
