@@ -18,26 +18,28 @@ import objectRepository.caimpaignpage;
 public class Caimpaign_Test extends baseclass {
 	ExcelFileUtility efu = new ExcelFileUtility();
 	ExcelFileUtility eLib = new ExcelFileUtility();
-	caimpaignpage cp ;
+	caimpaignpage cp;
 
 	@Test
 	public void campaignWithMendatoryFields() throws InterruptedException, EncryptedDocumentException, IOException {
-		cp= new caimpaignpage(driver);
+		cp = new caimpaignpage(driver);
 		// WebDriver driver = new ChromeDriver(settings);
 
 		cp.getAddCreateCampaignBtn1().click();
 		javautility.enterRandomString(cp.getCampaignName(), 8);
 
 		String TARGET_SIZE = eLib.readDataFromExcel("Campaign", 1, 1);
-
+		System.out.println("adding changes");
+// for testing only
 		WebElement createButton = cp.getSubmitButton();
 		createButton.click();
 		Assert.assertTrue(cp.getToastmsg1().getText().contains("Successfully Added"));
 
 	}
-@Test
+
+	@Test
 	public void campaignWithAllFields() throws EncryptedDocumentException, IOException {
-		cp=new caimpaignpage(driver);
+		cp = new caimpaignpage(driver);
 		cp.getAddCreateCampaignBtn1().click();
 		javautility.enterRandomString(cp.getCampaignName(), 6);
 		javautility.getRequiredDate(5);
