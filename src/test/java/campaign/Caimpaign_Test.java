@@ -27,10 +27,11 @@ public class Caimpaign_Test extends baseclass {
 
 		cp.getAddCreateCampaignBtn1().click();
 		javautility.enterRandomString(cp.getCampaignName(), 8);
-
+// kfnf
+		//joijfo
 		String TARGET_SIZE = eLib.readDataFromExcel("Campaign", 1, 1);
-		System.out.println("adding changes");
-// for testing only
+
+		System.out.println("TARGET_SIZE");
 		WebElement createButton = cp.getSubmitButton();
 		createButton.click();
 		Assert.assertTrue(cp.getToastmsg1().getText().contains("Successfully Added"));
