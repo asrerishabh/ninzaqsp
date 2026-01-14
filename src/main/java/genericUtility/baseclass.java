@@ -32,6 +32,7 @@ public class baseclass {
 		
 		//String BROWSER = pfu.readDataFromPropertiesFile("BROWSER");
 		String BROWSER=System.getProperty("BROWSER");
+		System.out.println(BROWSER);
 		if (BROWSER.equalsIgnoreCase("chrome"))
 			driver = new ChromeDriver(settings);
 		else if (BROWSER.equalsIgnoreCase("edge"))
